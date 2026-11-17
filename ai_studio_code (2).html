@@ -1,0 +1,1859 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tobemom | 개인 포트폴리오</title>
+    <meta
+      name="description"
+      content="유아특수교육학과 5학년 tobemom의 소개, 주요 작업물, 연락처를 3분 안에 확인할 수 있는 단일 HTML 개인 포트폴리오입니다."
+    />
+    <meta property="og:title" content="tobemom | 개인 포트폴리오" />
+    <meta
+      property="og:description"
+      content="아이들을 바라보는 시선의 노하우를 바탕으로 임용과 센터 현장을 준비하는 유아특수교육학과 5학년 tobemom의 포트폴리오입니다."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Fonts: Pretendard (Korean) + Plus Jakarta Sans (Display) + JetBrains Mono (Tabular/Tech) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap"
+    />
+
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem('portfolio-theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+
+    <style>
+      :root {
+        --bg-canvas: #ffffff;
+        --bg-header: rgba(255, 255, 255, 0.94);
+        --bg-card: #ffffff;
+        --bg-surface: #f8fafc;
+        --bg-surface-hover: #f1f5f9;
+        --border-hairline: #e2e8f0;
+        --border-strong: #cbd5e1;
+        --text-primary: #0f172a;
+        --text-secondary: #475569;
+        --text-muted: #64748b;
+        --accent: #6366f1;
+        --accent-hover: #4f46e5;
+        --accent-text: #4338ca;
+        --accent-tint: #eef2ff;
+        --accent-tint-border: #c7d2fe;
+        --thumb-indigo: #eef2ff;
+        --thumb-sky: #eff6ff;
+        --thumb-rose: #fff1f2;
+        --thumb-emerald: #ecfdf5;
+        --fallback-grad: linear-gradient(160deg, #ffffff 0%, #eef2ff 100%);
+        --card-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+        --card-shadow-hover: 0 16px 32px -8px rgba(15, 23, 42, 0.16),
+          0 4px 12px -4px rgba(99, 102, 241, 0.16);
+        --drawer-shadow: 0 12px 24px -8px rgba(15, 23, 42, 0.12);
+        --focus-ring: rgba(99, 102, 241, 0.35);
+
+        --font-sans: 'Pretendard', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont,
+          'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+        --font-display: 'Plus Jakarta Sans', 'Pretendard', -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          monospace;
+
+        --container-max: 1160px;
+        --header-height: 68px;
+        --radius-sm: 8px;
+        --radius-md: 12px;
+        --radius-lg: 16px;
+        --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      html.dark {
+        color-scheme: dark;
+        --bg-canvas: #0b1120;
+        --bg-header: rgba(11, 17, 32, 0.9);
+        --bg-card: #131c31;
+        --bg-surface: #182238;
+        --bg-surface-hover: #212e4a;
+        --border-hairline: #26334d;
+        --border-strong: #394b6e;
+        --text-primary: #f8fafc;
+        --text-secondary: #cbd5e1;
+        --text-muted: #94a3b8;
+        --accent: #6366f1;
+        --accent-hover: #818cf8;
+        --accent-text: #a5b4fc;
+        --accent-tint: rgba(99, 102, 241, 0.2);
+        --accent-tint-border: rgba(129, 140, 248, 0.45);
+        --thumb-indigo: rgba(99, 102, 241, 0.18);
+        --thumb-sky: rgba(56, 189, 248, 0.16);
+        --thumb-rose: rgba(244, 63, 94, 0.16);
+        --thumb-emerald: rgba(16, 185, 129, 0.16);
+        --fallback-grad: linear-gradient(160deg, #131c31 0%, #1e1b4b 100%);
+        --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
+        --card-shadow-hover: 0 20px 36px -8px rgba(0, 0, 0, 0.6),
+          0 6px 14px -4px rgba(99, 102, 241, 0.28);
+        --drawer-shadow: 0 14px 28px -8px rgba(0, 0, 0, 0.55);
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: calc(var(--header-height) + 24px);
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body {
+        margin: 0;
+        padding-top: var(--header-height);
+        background-color: var(--bg-canvas);
+        color: var(--text-primary);
+        font-family: var(--font-sans);
+        font-size: 16px;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button {
+        font-family: inherit;
+        cursor: pointer;
+        border: none;
+        background: none;
+        padding: 0;
+        color: inherit;
+      }
+
+      :focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+        border-radius: 4px;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .container {
+        width: 100%;
+        max-width: var(--container-max);
+        margin-inline: auto;
+        padding-inline: 24px;
+      }
+
+      /* 1. 상단 메뉴 (스크롤 시 고정 · 3-Zone Top Bar) */
+      .site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 40;
+        height: var(--header-height);
+        background-color: var(--bg-header);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border-hairline);
+        transition:
+          background-color 200ms var(--ease-out),
+          border-color 200ms var(--ease-out);
+      }
+
+      .header-inner {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+      }
+
+      .brand {
+        font-family: var(--font-display);
+        font-size: 1.125rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: var(--text-primary);
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+
+      .nav-list {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-link {
+        position: relative;
+        font-size: 0.9375rem;
+        font-weight: 500;
+        color: var(--text-secondary);
+        white-space: nowrap;
+        flex-shrink: 0;
+        padding-block: 6px;
+        transition: color 160ms var(--ease-out);
+      }
+
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+        background-color: var(--accent);
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform 180ms var(--ease-out);
+      }
+
+      .nav-link:hover {
+        color: var(--text-primary);
+      }
+
+      .nav-link.is-active {
+        color: var(--accent);
+        font-weight: 700;
+      }
+
+      .nav-link.is-active::after,
+      .nav-link:hover::after {
+        transform: scaleX(1);
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-shrink: 0;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 44px;
+        padding: 10px 22px;
+        border-radius: var(--radius-sm);
+        font-size: 0.9375rem;
+        font-weight: 600;
+        white-space: nowrap;
+        flex-shrink: 0;
+        transition:
+          background-color 160ms var(--ease-out),
+          border-color 160ms var(--ease-out),
+          color 160ms var(--ease-out),
+          transform 160ms var(--ease-out);
+      }
+
+      .btn:active {
+        transform: translateY(1px);
+      }
+
+      .btn-primary {
+        background-color: var(--accent);
+        color: #ffffff;
+        border: 1px solid var(--accent);
+      }
+
+      .btn-primary:hover {
+        background-color: var(--accent-hover);
+        border-color: var(--accent-hover);
+      }
+
+      .btn-secondary {
+        background-color: var(--bg-card);
+        color: var(--text-primary);
+        border: 1px solid var(--border-strong);
+      }
+
+      .btn-secondary:hover {
+        background-color: var(--bg-surface);
+        border-color: var(--text-muted);
+      }
+
+      .btn-sm {
+        min-height: 40px;
+        padding: 8px 18px;
+        font-size: 0.875rem;
+      }
+
+      /* 다크 모드 토글 버튼 */
+      .theme-toggle-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--border-hairline);
+        background-color: var(--bg-surface);
+        color: var(--text-primary);
+        flex-shrink: 0;
+        transition:
+          background-color 160ms var(--ease-out),
+          border-color 160ms var(--ease-out),
+          color 160ms var(--ease-out);
+      }
+
+      .theme-toggle-btn:hover {
+        background-color: var(--bg-surface-hover);
+        border-color: var(--border-strong);
+      }
+
+      .theme-toggle-btn .icon-sun {
+        display: none;
+      }
+
+      html.dark .theme-toggle-btn .icon-moon {
+        display: none;
+      }
+
+      html.dark .theme-toggle-btn .icon-sun {
+        display: block;
+      }
+
+      .mobile-menu-btn {
+        display: none;
+        width: 44px;
+        height: 44px;
+        align-items: center;
+        justify-content: center;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--border-hairline);
+        background-color: var(--bg-card);
+        color: var(--text-primary);
+      }
+
+      .mobile-menu-btn .icon-close {
+        display: none;
+      }
+
+      .mobile-menu-btn[aria-expanded='true'] .icon-hamburger {
+        display: none;
+      }
+
+      .mobile-menu-btn[aria-expanded='true'] .icon-close {
+        display: block;
+      }
+
+      .mobile-drawer {
+        display: none;
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        z-index: 39;
+        background-color: var(--bg-card);
+        border-bottom: 1px solid var(--border-hairline);
+        box-shadow: var(--drawer-shadow);
+        padding: 12px 24px 16px;
+      }
+
+      .mobile-drawer.is-open {
+        display: block;
+      }
+
+      .mobile-nav-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .mobile-nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 48px;
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--text-secondary);
+        border-bottom: 1px solid var(--bg-surface-hover);
+      }
+
+      .mobile-nav-link.is-active {
+        color: var(--accent);
+        font-weight: 700;
+      }
+
+      .mobile-nav-link:last-child {
+        border-bottom: none;
+      }
+
+      /* 2. 히어로 섹션 */
+      .hero-section {
+        padding-block: 72px 64px;
+        border-bottom: 1px solid var(--border-hairline);
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.85fr);
+        gap: 56px;
+        align-items: stretch;
+      }
+
+      .hero-copy {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .hero-kicker {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--accent-text);
+        letter-spacing: -0.01em;
+        margin: 0 0 16px;
+      }
+
+      .hero-title {
+        font-family: var(--font-display);
+        font-size: clamp(2.15rem, 3.8vw, 3.25rem);
+        font-weight: 700;
+        line-height: 1.22;
+        letter-spacing: -0.03em;
+        color: var(--text-primary);
+        text-wrap: balance;
+        margin: 0 0 20px;
+      }
+
+      .hero-title .accent-word {
+        color: var(--accent);
+      }
+
+      .hero-lead {
+        font-size: 1.0625rem;
+        line-height: 1.7;
+        color: var(--text-secondary);
+        max-width: 58ch;
+        margin: 0 0 32px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .hero-media {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      .profile-frame {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        max-width: 100%;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        border: 1px solid var(--border-hairline);
+        box-shadow: 0 0 0 8px var(--bg-surface);
+        background-color: var(--bg-surface);
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+
+      .profile-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 20%;
+      }
+
+      .profile-fallback {
+        position: absolute;
+        inset: 0;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 24px;
+        text-align: center;
+        background: var(--fallback-grad);
+        color: var(--text-secondary);
+      }
+
+      .profile-frame.is-fallback .profile-fallback {
+        display: flex;
+      }
+
+      .profile-frame.is-fallback img {
+        display: none;
+      }
+
+      .profile-fallback-emoji {
+        font-size: 4.5rem;
+        line-height: 1;
+        user-select: none;
+      }
+
+      .profile-fallback-sub {
+        font-size: 0.8125rem;
+        font-weight: 600;
+        color: var(--accent-text);
+        margin: 0;
+      }
+
+      /* 히어로 하단 3열 요약 스트립 */
+      .hero-summary-strip {
+        margin-top: 56px;
+        padding-top: 32px;
+        border-top: 1px solid var(--border-hairline);
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 32px;
+      }
+
+      .summary-item {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .summary-label {
+        font-size: 0.8125rem;
+        font-weight: 500;
+        color: var(--text-muted);
+      }
+
+      .summary-value {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        font-variant-numeric: tabular-nums;
+      }
+
+      /* 공통 섹션 리듬 & 스크롤 등장 애니메이션 (0.5초) */
+      .section {
+        padding-block: 88px;
+      }
+
+      .section-bordered {
+        border-bottom: 1px solid var(--border-hairline);
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.5s var(--ease-out),
+          transform 0.5s var(--ease-out);
+      }
+
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .section-header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 40px;
+      }
+
+      .section-kicker {
+        font-size: 0.8125rem;
+        font-weight: 600;
+        color: var(--accent-text);
+        margin: 0 0 8px;
+      }
+
+      .section-title {
+        font-family: var(--font-display);
+        font-size: clamp(1.625rem, 2.4vw, 2rem);
+        font-weight: 700;
+        letter-spacing: -0.025em;
+        color: var(--text-primary);
+        margin: 0;
+        text-wrap: balance;
+      }
+
+      .section-subtitle {
+        font-size: 0.9375rem;
+        color: var(--text-secondary);
+        margin: 8px 0 0;
+      }
+
+      /* 3. 자기소개 섹션 */
+      .about-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+        gap: 48px;
+        align-items: start;
+      }
+
+      .about-story {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .about-meta-line {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--accent-text);
+        margin: 0;
+      }
+
+      .about-story-text {
+        margin: 0;
+        color: var(--text-secondary);
+        font-size: 1.0625rem;
+        line-height: 1.8;
+        max-width: 54ch;
+      }
+
+      .about-story-text strong {
+        color: var(--text-primary);
+        font-weight: 600;
+      }
+
+      .about-tags-panel {
+        background-color: var(--bg-surface);
+        border: 1px solid var(--border-hairline);
+        border-radius: var(--radius-md);
+        padding: 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .tag-group-label {
+        display: block;
+        font-size: 0.8125rem;
+        font-weight: 600;
+        color: var(--text-muted);
+        margin-bottom: 12px;
+      }
+
+      .tag-chip-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .tag-chip {
+        display: inline-flex;
+        align-items: center;
+        padding: 7px 15px;
+        border-radius: 9999px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        line-height: 1.4;
+        background-color: var(--bg-card);
+        border: 1px solid var(--border-hairline);
+        color: var(--text-primary);
+        white-space: nowrap;
+      }
+
+      .tag-chip-accent {
+        background-color: var(--accent-tint);
+        border-color: var(--accent-tint-border);
+        color: var(--accent-text);
+        font-weight: 600;
+      }
+
+      /* 4. 작업물 섹션 */
+      .projects-header {
+        margin-bottom: 24px;
+      }
+
+      .filter-bar {
+        margin-bottom: 24px;
+      }
+
+      .filter-tabs {
+        display: inline-flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 4px;
+        padding: 4px;
+        background-color: var(--bg-surface);
+        border: 1px solid var(--border-hairline);
+        border-radius: var(--radius-sm);
+      }
+
+      .filter-btn {
+        min-height: 36px;
+        padding: 6px 14px;
+        border-radius: 6px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--text-secondary);
+        white-space: nowrap;
+        flex-shrink: 0;
+        transition:
+          background-color 150ms var(--ease-out),
+          color 150ms var(--ease-out);
+      }
+
+      .filter-btn:hover {
+        color: var(--text-primary);
+      }
+
+      .filter-btn.is-active {
+        background-color: var(--bg-card);
+        color: var(--accent-text);
+        font-weight: 600;
+        box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      .project-card {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--bg-card);
+        border: 1px solid var(--border-hairline);
+        border-radius: var(--radius-md);
+        box-shadow: var(--card-shadow);
+        overflow: hidden;
+        transition:
+          transform 200ms var(--ease-out),
+          box-shadow 200ms var(--ease-out),
+          border-color 200ms var(--ease-out);
+      }
+
+      .project-card:hover {
+        transform: translateY(-6px);
+        border-color: var(--accent);
+        box-shadow: var(--card-shadow-hover);
+      }
+
+      .project-card.is-hidden {
+        display: none;
+      }
+
+      .project-thumb {
+        height: 136px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid var(--border-hairline);
+        font-size: 3rem;
+        line-height: 1;
+        user-select: none;
+      }
+
+      .thumb-indigo {
+        background-color: var(--thumb-indigo);
+      }
+
+      .thumb-sky {
+        background-color: var(--thumb-sky);
+      }
+
+      .thumb-rose {
+        background-color: var(--thumb-rose);
+      }
+
+      .thumb-emerald {
+        background-color: var(--thumb-emerald);
+      }
+
+      .project-body {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+        gap: 16px;
+      }
+
+      .project-title {
+        font-family: var(--font-display);
+        font-size: 1.0625rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: var(--text-primary);
+        margin: 0 0 8px;
+      }
+
+      .project-desc {
+        font-size: 0.875rem;
+        line-height: 1.6;
+        color: var(--text-secondary);
+        margin: 0;
+      }
+
+      .project-footer {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 14px;
+        border-top: 1px solid var(--border-hairline);
+      }
+
+      .project-tech {
+        font-size: 0.8125rem;
+        font-weight: 500;
+        line-height: 1.45;
+        color: var(--text-muted);
+      }
+
+      .project-site-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        min-height: 36px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--accent-text);
+        white-space: nowrap;
+        transition: color 150ms var(--ease-out);
+      }
+
+      .project-site-link:hover {
+        color: var(--accent-hover);
+      }
+
+      /* 5. 연락처 섹션 */
+      .contact-card {
+        background-color: var(--bg-surface);
+        border: 1px solid var(--border-hairline);
+        border-radius: var(--radius-lg);
+        padding: 40px;
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+        gap: 40px;
+        align-items: center;
+      }
+
+      .contact-title {
+        font-family: var(--font-display);
+        font-size: clamp(1.5rem, 2.2vw, 1.875rem);
+        font-weight: 700;
+        letter-spacing: -0.025em;
+        color: var(--text-primary);
+        margin: 0 0 12px;
+        text-wrap: balance;
+      }
+
+      .contact-desc {
+        font-size: 0.9375rem;
+        color: var(--text-secondary);
+        margin: 0 0 24px;
+        max-width: 52ch;
+      }
+
+      .purpose-label {
+        display: block;
+        font-size: 0.8125rem;
+        font-weight: 600;
+        color: var(--text-muted);
+        margin-bottom: 10px;
+      }
+
+      .purpose-tabs {
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .purpose-btn {
+        min-height: 36px;
+        padding: 6px 14px;
+        border-radius: 6px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--text-secondary);
+        background-color: var(--bg-card);
+        border: 1px solid var(--border-hairline);
+        white-space: nowrap;
+        transition:
+          border-color 150ms var(--ease-out),
+          color 150ms var(--ease-out),
+          background-color 150ms var(--ease-out);
+      }
+
+      .purpose-btn:hover {
+        border-color: var(--border-strong);
+        color: var(--text-primary);
+      }
+
+      .purpose-btn.is-active {
+        border-color: var(--accent);
+        background-color: var(--accent-tint);
+        color: var(--accent-text);
+        font-weight: 600;
+      }
+
+      .contact-channels {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .channel-box {
+        background-color: var(--bg-card);
+        border: 1px solid var(--border-hairline);
+        border-radius: var(--radius-md);
+        padding: 18px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .channel-info {
+        min-width: 0;
+      }
+
+      .channel-name {
+        display: block;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--text-muted);
+        margin-bottom: 4px;
+      }
+
+      .channel-value {
+        display: block;
+        font-family: var(--font-mono);
+        font-size: 0.9375rem;
+        font-weight: 500;
+        color: var(--text-primary);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .channel-value:hover {
+        color: var(--accent-text);
+      }
+
+      .channel-actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-shrink: 0;
+      }
+
+      .icon-action-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        min-height: 40px;
+        padding: 8px 14px;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--border-hairline);
+        background-color: var(--bg-surface);
+        font-size: 0.8125rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        white-space: nowrap;
+        transition:
+          background-color 150ms var(--ease-out),
+          border-color 150ms var(--ease-out),
+          color 150ms var(--ease-out);
+      }
+
+      .icon-action-btn:hover {
+        background-color: var(--bg-surface-hover);
+        border-color: var(--border-strong);
+      }
+
+      .icon-action-btn.is-copied {
+        border-color: var(--accent);
+        background-color: var(--accent-tint);
+        color: var(--accent-text);
+      }
+
+      /* 6. 푸터 */
+      .site-footer {
+        border-top: 1px solid var(--border-hairline);
+        padding-block: 32px;
+      }
+
+      .footer-inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+      }
+
+      .footer-top-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-weight: 500;
+        color: var(--text-secondary);
+        min-height: 40px;
+        transition: color 150ms var(--ease-out);
+      }
+
+      .footer-top-link:hover {
+        color: var(--accent-text);
+      }
+
+      /* 반응형 (태블릿 및 모바일) */
+      @media (max-width: 1024px) {
+        .projects-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 960px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+
+        .hero-media {
+          order: -1;
+          justify-content: center;
+        }
+
+        .profile-frame {
+          width: 240px;
+          height: 240px;
+        }
+
+        .about-grid,
+        .contact-card {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+      }
+
+      @media (max-width: 767px) {
+        :root {
+          --header-height: 60px;
+        }
+
+        .nav-list,
+        .header-actions .btn {
+          display: none;
+        }
+
+        .mobile-menu-btn {
+          display: inline-flex;
+        }
+
+        .hero-section {
+          padding-block: 40px 48px;
+        }
+
+        .hero-summary-strip {
+          grid-template-columns: 1fr;
+          gap: 20px;
+          margin-top: 36px;
+        }
+
+        .section {
+          padding-block: 60px;
+        }
+
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-card {
+          padding: 24px;
+        }
+
+        .channel-box {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .channel-value {
+          white-space: normal;
+          overflow-wrap: anywhere;
+        }
+
+        /* 모바일에서 모든 본문·라벨·태그·버튼 글자를 최소 16px(1rem) 이상으로 유지 */
+        body,
+        .btn,
+        .btn-sm,
+        .mobile-nav-link,
+        .hero-kicker,
+        .hero-lead,
+        .profile-fallback-sub,
+        .summary-label,
+        .summary-value,
+        .section-kicker,
+        .section-subtitle,
+        .about-meta-line,
+        .about-story-text,
+        .tag-group-label,
+        .tag-chip,
+        .filter-btn,
+        .project-desc,
+        .project-tech,
+        .project-site-link,
+        .contact-desc,
+        .purpose-label,
+        .purpose-btn,
+        .channel-name,
+        .channel-value,
+        .icon-action-btn,
+        .footer-inner,
+        .footer-top-link {
+          font-size: 1rem;
+        }
+
+        .project-title {
+          font-size: 1.125rem;
+        }
+
+        .hero-title {
+          font-size: 2rem;
+        }
+        .theme-toggle-btn {
+          width: 44px;
+          height: 44px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        .reveal {
+          opacity: 1;
+          transform: none;
+        }
+
+        *,
+        *::before,
+        *::after {
+          transition-duration: 0.01ms !important;
+          animation-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body id="top">
+    <!-- 1. 상단 메뉴 -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#top" class="brand">tobemom</a>
+
+        <nav aria-label="주 메뉴">
+          <ul class="nav-list">
+            <li><a href="#about" class="nav-link" data-nav="about">소개</a></li>
+            <li><a href="#projects" class="nav-link" data-nav="projects">작업물</a></li>
+            <li><a href="#contact" class="nav-link" data-nav="contact">연락처</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <a href="#contact" class="btn btn-primary btn-sm">연락하기</a>
+          <button
+            type="button"
+            class="theme-toggle-btn"
+            id="theme-toggle"
+            aria-label="다크 모드로 전환"
+            aria-pressed="false"
+            title="테마 전환"
+          >
+            <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+          <button
+            type="button"
+            class="mobile-menu-btn"
+            id="mobile-menu-toggle"
+            aria-expanded="false"
+            aria-controls="mobile-drawer"
+            aria-label="메뉴 열기"
+          >
+            <svg class="icon-hamburger" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <line x1="4" y1="7" x2="20" y2="7"></line>
+              <line x1="4" y1="12" x2="20" y2="12"></line>
+              <line x1="4" y1="17" x2="20" y2="17"></line>
+            </svg>
+            <svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-drawer" id="mobile-drawer" aria-label="모바일 메뉴">
+        <ul class="mobile-nav-list">
+          <li><a href="#about" class="mobile-nav-link" data-nav="about">소개</a></li>
+          <li><a href="#projects" class="mobile-nav-link" data-nav="projects">작업물</a></li>
+          <li><a href="#contact" class="mobile-nav-link" data-nav="contact">연락처</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <!-- 2. 히어로 -->
+      <section class="hero-section reveal" aria-labelledby="hero-heading">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <p class="hero-kicker">유아특수교육학과 5학년 · 임용 / 센터</p>
+              <h1 id="hero-heading" class="hero-title">
+                아이를 바라보는 시선으로<br />
+                <span class="accent-word">성장의 속도</span>를 함께 맞춥니다.
+              </h1>
+              <p class="hero-lead">
+                안녕하세요, tobemom입니다. 유아특수교육학과 5학년 과정을 거치며 다져온
+                ‘아이들을 바라보는 시선의 노하우’로, 임용과 센터 현장 어디서든 아이와 가정에
+                믿음을 주는 교육자로 성장하고 있습니다.
+              </p>
+              <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">작업물 보기</a>
+                <a href="#contact" class="btn btn-secondary">연락하기</a>
+              </div>
+            </div>
+
+            <!-- 원형 프로필 이미지 자리 (사진이 없거나 src가 비어 있으면 이모지가 표시됩니다) -->
+            <div class="hero-media">
+              <div class="profile-frame" id="profile-frame">
+                <!-- 본인 사진을 넣으려면 src에 이미지 경로를 입력하고, 사진 없이 이모지를 쓰려면 src=""로 비워두세요 -->
+                <img
+                  id="profile-img"
+                  src="/src/assets/images/hero_student_portrait_1794911027289.jpg"
+                  alt="tobemom 프로필 사진"
+                  referrerpolicy="no-referrer"
+                />
+                <div class="profile-fallback" aria-label="tobemom 프로필 이모지">
+                  <span class="profile-fallback-emoji" role="img" aria-label="미소 짓는 프로필 이모지">😊</span>
+                  <p class="profile-fallback-sub">tobemom</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-summary-strip" aria-label="핵심 요약">
+            <div class="summary-item">
+              <span class="summary-label">학과 · 학년</span>
+              <span class="summary-value">유아특수교육학과 5학년</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">관심 분야</span>
+              <span class="summary-value">임용 / 아동발달 · 교육 센터</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">나를 보여 주는 경험</span>
+              <span class="summary-value">아이들을 바라보는 시선의 노하우</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. 자기소개 -->
+      <section id="about" class="section section-bordered reveal" aria-labelledby="about-heading">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <p class="section-kicker">About</p>
+              <h2 id="about-heading" class="section-title">나를 소개합니다</h2>
+            </div>
+          </div>
+
+          <div class="about-grid">
+            <!-- 왼쪽: 나를 소개하는 글 3~4줄 -->
+            <div class="about-story">
+              <p class="about-meta-line">tobemom · 유아특수교육학과 5학년</p>
+              <p class="about-story-text">
+                유아특수교육학과 5학년 과정을 통해 다양한 기질과 속도를 가진 아이들을 가까이에서 만나 왔습니다.
+                문제 행동으로 보이는 순간에도 아이가 보내는 작은 신호와 맥락을 먼저 읽어내는 <strong>‘아이들을 바라보는 시선의 노하우’</strong>가 저의 가장 큰 강점입니다.
+                이러한 관찰과 기록의 경험을 바탕으로, 공립 특수교사 임용과 아동발달·교육 센터 현장에서 아이와 부모님 모두에게 든든한 동반자가 되고자 합니다.
+              </p>
+            </div>
+
+            <!-- 오른쪽: 관심 분야·역량 태그(칩) -->
+            <aside class="about-tags-panel" aria-label="관심 분야 및 핵심 역량">
+              <div>
+                <span class="tag-group-label">관심 분야</span>
+                <ul class="tag-chip-list">
+                  <li class="tag-chip tag-chip-accent">임용</li>
+                  <li class="tag-chip tag-chip-accent">센터</li>
+                  <li class="tag-chip">유아특수교육</li>
+                  <li class="tag-chip">통합교육 현장</li>
+                </ul>
+              </div>
+
+              <div>
+                <span class="tag-group-label">핵심 역량</span>
+                <ul class="tag-chip-list">
+                  <li class="tag-chip">아이들을 바라보는 시선의 노하우</li>
+                  <li class="tag-chip">유아 행동 관찰 · 기록</li>
+                  <li class="tag-chip">개별화교육계획(IEP) 설계</li>
+                  <li class="tag-chip">긍정적 행동지원(PBS)</li>
+                  <li class="tag-chip">놀이 · 감각 교구 제작</li>
+                  <li class="tag-chip">가정 · 기관 연계 소통</li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. 작업물 -->
+      <section id="projects" class="section section-bordered reveal" aria-labelledby="projects-heading">
+        <div class="container">
+          <div class="projects-header">
+            <p class="section-kicker">Projects</p>
+            <h2 id="projects-heading" class="section-title">작업물</h2>
+            <p class="section-subtitle">
+              직접 기획하고 만들어 본 4가지 웹 작업물입니다.
+            </p>
+          </div>
+
+          <div class="filter-bar">
+            <div class="filter-tabs" role="tablist" aria-label="작업물 분류">
+              <button type="button" class="filter-btn is-active" data-filter="all" role="tab" aria-selected="true">
+                전체
+              </button>
+              <button type="button" class="filter-btn" data-filter="automation" role="tab" aria-selected="false">
+                학업 자동화
+              </button>
+              <button type="button" class="filter-btn" data-filter="website" role="tab" aria-selected="false">
+                웹사이트
+              </button>
+              <button type="button" class="filter-btn" data-filter="game" role="tab" aria-selected="false">
+                게임·테스트
+              </button>
+            </div>
+          </div>
+
+          <div class="projects-grid" id="projects-grid">
+            <!-- 1. 순공 타이머 -->
+            <article class="project-card" data-category="automation">
+              <div class="project-thumb thumb-indigo" aria-hidden="true">⏱️</div>
+              <div class="project-body">
+                <div>
+                  <h3 class="project-title">순공 타이머</h3>
+                  <p class="project-desc">집중 학습 시간과 휴식 흐름을 한눈에 기록하는 스터디 타이머</p>
+                </div>
+                <div class="project-footer">
+                  <div class="project-tech">학업 자동화 · HTML/CSS/JS</div>
+                  <a
+                    href="https://tobemom.github.io/study-timer"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-site-link"
+                  >
+                    사이트 보기 →
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 2. D-day 매니저 -->
+            <article class="project-card" data-category="automation">
+              <div class="project-thumb thumb-sky" aria-hidden="true">📅</div>
+              <div class="project-body">
+                <div>
+                  <h3 class="project-title">D-day 매니저</h3>
+                  <p class="project-desc">시험과 실습 일정을 우선순위별로 정리하는 목표 디데이 보드</p>
+                </div>
+                <div class="project-footer">
+                  <div class="project-tech">학업 자동화 · 일정 관리</div>
+                  <a
+                    href="https://tobemom.github.io/dday-manager"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-site-link"
+                  >
+                    사이트 보기 →
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 3. 달콤공방 랜딩 -->
+            <article class="project-card" data-category="website">
+              <div class="project-thumb thumb-rose" aria-hidden="true">🧁</div>
+              <div class="project-body">
+                <div>
+                  <h3 class="project-title">달콤공방 랜딩</h3>
+                  <p class="project-desc">수제 디저트 공방의 메뉴 소개와 예약 안내를 담은 반응형 페이지</p>
+                </div>
+                <div class="project-footer">
+                  <div class="project-tech">웹사이트 · 반응형 레이아웃</div>
+                  <a
+                    href="https://tobemom.github.io/dalkom-atelier"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-site-link"
+                  >
+                    사이트 보기 →
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 4. 직무 유형 테스트 -->
+            <article class="project-card" data-category="game">
+              <div class="project-thumb thumb-emerald" aria-hidden="true">🧭</div>
+              <div class="project-body">
+                <div>
+                  <h3 class="project-title">직무 유형 테스트</h3>
+                  <p class="project-desc">간단한 질문 선택으로 나와 어울리는 성향과 강점을 찾는 테스트</p>
+                </div>
+                <div class="project-footer">
+                  <div class="project-tech">게임·테스트 · 인터랙티브 UI</div>
+                  <a
+                    href="https://tobemom.github.io/job-type-test"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-site-link"
+                  >
+                    사이트 보기 →
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. 연락처 -->
+      <section id="contact" class="section reveal" aria-labelledby="contact-heading">
+        <div class="container">
+          <div class="contact-card">
+            <div>
+              <p class="section-kicker">Contact</p>
+              <h2 id="contact-heading" class="contact-title">언제든 편하게 연락 주세요</h2>
+              <p class="contact-desc">
+                센터 채용·실습 문의, 교수님 면담, 임용 스터디 및 교육 자료 협업 제안을 환영합니다.
+                보내주신 메일은 확인 후 24시간 이내에 정성껏 답장드리겠습니다.
+              </p>
+
+              <span class="purpose-label">문의 목적을 선택하면 메일 제목이 자동으로 맞춰집니다</span>
+              <div class="purpose-tabs" role="group" aria-label="문의 목적 선택">
+                <button
+                  type="button"
+                  class="purpose-btn is-active"
+                  data-subject="[센터·채용 문의] tobemom님 포트폴리오를 보고 연락드립니다"
+                >
+                  센터 · 채용
+                </button>
+                <button
+                  type="button"
+                  class="purpose-btn"
+                  data-subject="[교수님·실습 관련] 면담 가능 시간 문의드립니다"
+                >
+                  교수님 · 실습
+                </button>
+                <button
+                  type="button"
+                  class="purpose-btn"
+                  data-subject="[임용·스터디 협업] 함께 논의하고 싶습니다"
+                >
+                  임용 · 스터디
+                </button>
+              </div>
+            </div>
+
+            <div class="contact-channels">
+              <div class="channel-box">
+                <div class="channel-info">
+                  <span class="channel-name">이메일</span>
+                  <a
+                    id="mailto-link"
+                    href="mailto:tobemom@example.com?subject=%5B%EC%84%BC%ED%84%B0%C2%B7%EC%B1%84%EC%9A%A9%20%EB%AC%B8%EC%9D%98%5D%20tobemom%EB%8B%98%20%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4%EB%A5%BC%20%EB%B3%B4%EA%B3%A0%20%EC%97%B0%EB%9D%BD%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4"
+                    class="channel-value"
+                  >
+                    tobemom@example.com
+                  </a>
+                </div>
+                <div class="channel-actions">
+                  <button type="button" class="icon-action-btn" id="copy-email-btn">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span id="copy-email-label">주소 복사</span>
+                  </button>
+                  <a
+                    id="compose-email-btn"
+                    href="mailto:tobemom@example.com?subject=%5B%EC%84%BC%ED%84%B0%C2%B7%EC%B1%84%EC%9A%A9%20%EB%AC%B8%EC%9D%98%5D%20tobemom%EB%8B%98%20%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4%EB%A5%BC%20%EB%B3%B4%EA%B3%A0%20%EC%97%B0%EB%9D%BD%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4"
+                    class="btn btn-primary btn-sm"
+                  >
+                    메일 쓰기
+                  </a>
+                </div>
+              </div>
+
+              <div class="channel-box">
+                <div class="channel-info">
+                  <span class="channel-name">GitHub</span>
+                  <a
+                    href="https://github.com/tobemom"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="channel-value"
+                  >
+                    github.com/tobemom
+                  </a>
+                </div>
+                <div class="channel-actions">
+                  <a
+                    href="https://github.com/tobemom"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="icon-action-btn"
+                  >
+                    프로필 열기
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 6. 푸터 -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>© 2026 tobemom. All rights reserved.</span>
+        <a href="#top" class="footer-top-link">
+          맨 위로
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+          </svg>
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        'use strict';
+
+        // 0. 다크 모드 토글 및 localStorage 저장
+        var THEME_KEY = 'portfolio-theme';
+        var themeToggle = document.getElementById('theme-toggle');
+        var rootEl = document.documentElement;
+
+        function syncThemeButton(isDark) {
+          if (!themeToggle) return;
+          themeToggle.setAttribute('aria-pressed', String(isDark));
+          themeToggle.setAttribute(
+            'aria-label',
+            isDark ? '라이트 모드로 전환' : '다크 모드로 전환'
+          );
+        }
+
+        syncThemeButton(rootEl.classList.contains('dark'));
+
+        if (themeToggle) {
+          themeToggle.addEventListener('click', function () {
+            var nextIsDark = !rootEl.classList.contains('dark');
+            rootEl.classList.toggle('dark', nextIsDark);
+            syncThemeButton(nextIsDark);
+            try {
+              localStorage.setItem(THEME_KEY, nextIsDark ? 'dark' : 'light');
+            } catch (e) {}
+          });
+        }
+
+        // 0-1. 각 섹션이 화면에 들어올 때 아래에서 위로 0.5초 동안 서서히 등장
+        var revealTargets = document.querySelectorAll('.reveal');
+        if ('IntersectionObserver' in window && revealTargets.length > 0) {
+          var revealObserver = new IntersectionObserver(
+            function (entries, obs) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('is-visible');
+                  obs.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.08 }
+          );
+
+          revealTargets.forEach(function (el) {
+            revealObserver.observe(el);
+          });
+        } else {
+          revealTargets.forEach(function (el) {
+            el.classList.add('is-visible');
+          });
+        }
+
+        // 1. 프로필 이미지가 비어 있거나 로드 실패 시 이모지 폴백 표시
+        var profileFrame = document.getElementById('profile-frame');
+        var profileImg = document.getElementById('profile-img');
+        if (profileImg && profileFrame) {
+          var imgSrc = (profileImg.getAttribute('src') || '').trim();
+          if (!imgSrc) {
+            profileFrame.classList.add('is-fallback');
+          } else {
+            profileImg.addEventListener('error', function () {
+              profileFrame.classList.add('is-fallback');
+            });
+            if (profileImg.complete && profileImg.naturalWidth === 0) {
+              profileFrame.classList.add('is-fallback');
+            }
+          }
+        }
+
+        // 2. 모바일 내비게이션 드로어 토글
+        var menuToggle = document.getElementById('mobile-menu-toggle');
+        var mobileDrawer = document.getElementById('mobile-drawer');
+
+        function closeMobileDrawer() {
+          if (!mobileDrawer || !menuToggle) return;
+          mobileDrawer.classList.remove('is-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          menuToggle.setAttribute('aria-label', '메뉴 열기');
+        }
+
+        if (menuToggle && mobileDrawer) {
+          menuToggle.addEventListener('click', function () {
+            var isOpen = mobileDrawer.classList.toggle('is-open');
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+            menuToggle.setAttribute('aria-label', isOpen ? '메뉴 닫기' : '메뉴 열기');
+          });
+
+          document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+              closeMobileDrawer();
+            }
+          });
+        }
+
+        // 3. 메뉴 클릭 시 고정 헤더 높이를 고려해 해당 영역으로 부드럽게 이동
+        var siteHeader = document.querySelector('.site-header');
+        var prefersReducedMotion =
+          window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+          anchor.addEventListener('click', function (event) {
+            var targetId = anchor.getAttribute('href');
+            if (!targetId || targetId === '#') return;
+            var targetEl = document.querySelector(targetId);
+            if (!targetEl) return;
+
+            event.preventDefault();
+            closeMobileDrawer();
+
+            var headerOffset = siteHeader ? siteHeader.offsetHeight : 68;
+            var topPosition =
+              targetId === '#top'
+                ? 0
+                : targetEl.getBoundingClientRect().top + window.scrollY - headerOffset;
+
+            window.scrollTo({
+              top: Math.max(0, topPosition),
+              behavior: prefersReducedMotion ? 'auto' : 'smooth',
+            });
+          });
+        });
+
+        // 4. 현재 보고 있는 영역에 맞춰 상단·모바일 메뉴 보라색 강조
+        var allNavLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+        var sectionIds = ['about', 'projects', 'contact'];
+        var observedSections = sectionIds
+          .map(function (id) {
+            return document.getElementById(id);
+          })
+          .filter(Boolean);
+
+        function updateActiveNav() {
+          var headerOffset = siteHeader ? siteHeader.offsetHeight : 68;
+          var scrollY = window.scrollY;
+          var activeId = '';
+
+          if (window.innerHeight + scrollY >= document.documentElement.scrollHeight - 24) {
+            activeId = 'contact';
+          } else {
+            var checkLine = scrollY + headerOffset + 120;
+            for (var i = 0; i < observedSections.length; i++) {
+              if (checkLine >= observedSections[i].offsetTop) {
+                activeId = observedSections[i].id;
+              }
+            }
+          }
+
+          allNavLinks.forEach(function (link) {
+            link.classList.toggle('is-active', link.getAttribute('data-nav') === activeId);
+          });
+        }
+
+        var scrollTicking = false;
+        window.addEventListener(
+          'scroll',
+          function () {
+            if (!scrollTicking) {
+              window.requestAnimationFrame(function () {
+                updateActiveNav();
+                scrollTicking = false;
+              });
+              scrollTicking = true;
+            }
+          },
+          { passive: true }
+        );
+        updateActiveNav();
+
+        // 4. 작업물 카테고리 필터링
+        var filterButtons = document.querySelectorAll('.filter-btn');
+        var projectCards = document.querySelectorAll('.project-card');
+
+        filterButtons.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var selected = btn.getAttribute('data-filter');
+
+            filterButtons.forEach(function (other) {
+              var active = other === btn;
+              other.classList.toggle('is-active', active);
+              other.setAttribute('aria-selected', String(active));
+            });
+
+            projectCards.forEach(function (card) {
+              var category = card.getAttribute('data-category');
+              var shouldShow = selected === 'all' || category === selected;
+              card.classList.toggle('is-hidden', !shouldShow);
+            });
+          });
+        });
+
+        // 5. 연락처 문의 목적 선택 및 이메일 복사
+        var EMAIL_ADDRESS = 'tobemom@example.com';
+        var purposeButtons = document.querySelectorAll('.purpose-btn');
+        var mailtoLink = document.getElementById('mailto-link');
+        var composeEmailBtn = document.getElementById('compose-email-btn');
+
+        purposeButtons.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            purposeButtons.forEach(function (other) {
+              other.classList.toggle('is-active', other === btn);
+            });
+            var subject = btn.getAttribute('data-subject') || '';
+            var href = 'mailto:' + EMAIL_ADDRESS + '?subject=' + encodeURIComponent(subject);
+            if (mailtoLink) mailtoLink.setAttribute('href', href);
+            if (composeEmailBtn) composeEmailBtn.setAttribute('href', href);
+          });
+        });
+
+        var copyEmailBtn = document.getElementById('copy-email-btn');
+        var copyEmailLabel = document.getElementById('copy-email-label');
+        var copyResetTimer = null;
+
+        function setCopiedFeedback() {
+          if (!copyEmailBtn || !copyEmailLabel) return;
+          copyEmailBtn.classList.add('is-copied');
+          copyEmailLabel.textContent = '복사 완료';
+          if (copyResetTimer) clearTimeout(copyResetTimer);
+          copyResetTimer = setTimeout(function () {
+            copyEmailBtn.classList.remove('is-copied');
+            copyEmailLabel.textContent = '주소 복사';
+          }, 2200);
+        }
+
+        if (copyEmailBtn) {
+          copyEmailBtn.addEventListener('click', function () {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+              navigator.clipboard
+                .writeText(EMAIL_ADDRESS)
+                .then(setCopiedFeedback)
+                .catch(function () {
+                  fallbackCopy(EMAIL_ADDRESS);
+                });
+            } else {
+              fallbackCopy(EMAIL_ADDRESS);
+            }
+          });
+        }
+
+        function fallbackCopy(text) {
+          var textarea = document.createElement('textarea');
+          textarea.value = text;
+          textarea.setAttribute('readonly', '');
+          textarea.style.position = 'fixed';
+          textarea.style.opacity = '0';
+          document.body.appendChild(textarea);
+          textarea.select();
+          try {
+            document.execCommand('copy');
+            setCopiedFeedback();
+          } finally {
+            document.body.removeChild(textarea);
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>
